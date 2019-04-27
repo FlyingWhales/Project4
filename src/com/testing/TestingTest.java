@@ -7,12 +7,17 @@ public class TestingTest {
 		
 		
 		test1(i);
+		
+		Meslek m = new Meslek();
+		m.setMeslekAdi("Şarkıcı");
+		i.meslek = m; // meslek dependency ve burada inject ettik
+		
 		test2(i);
 	}
 	
 	public static void test1(Insan insan) {
 		
-		// mesleği işsiz ollanlar için ekrana işsiz yaz
+		// mesleği işsiz olanlar için ekrana işsiz yaz
 		
 		
 		if ( insan.meslek.getMeslekAdi() == "İşsiz") {
